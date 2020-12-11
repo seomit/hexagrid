@@ -1,0 +1,297 @@
+.hex-start-section{
+    width:1000px;
+    margin:0 auto;
+}
+.heading-section{
+	float: left;
+	width: 500px;
+}
+.grid-section{
+	float: left;
+	width: 500px;
+}
+.no-pointer{
+	pointer-events:none;
+}
+
+.heading1{
+	border-bottom: 2px solid #4ab052;
+	margin-top: calc(55% + 1px);
+	font-weight: 700;
+}
+.heading2{
+	border-bottom: 2px solid #f7bd33;
+	font-weight: 700;
+/* 	margin-top: 48%; */
+}
+.heading3{
+	border-bottom: 2px solid #00b0eb;
+	font-weight: 700;
+/* 	margin-top: 48%; */
+}
+.heading4{
+	border-bottom: 2px solid #f07d26;
+	font-weight: 700;
+/* 	margin-top: 48%; */
+}
+.subtext1,.subtext2,.subtext3,.subtext4{
+	font-size: 14px;
+	font-weight: 300;
+    line-height: 16px;
+    text-align: left;
+	margin:0 !important;
+	height: 136px;
+    padding-top: 7px;
+	padding-right: 20px;
+}
+.heading1,.heading2,.heading3,.heading4{
+	font-size: 20px;
+}
+/* Hex Grid Start */
+.hex-grid {
+  position: relative;
+  width: 90%;
+  left: 5%;
+  padding-top: 50px;
+}
+
+.hex-grid .grid-item {
+  position: relative;
+  display: inline-block;
+  float: left;
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  transform: rotate(120deg);
+  cursor: pointer;
+  transition: transform .3s ease-in-out;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+}
+.hex-grid .grid-item:not(.no-pointer):hover {
+    -webkit-transform: rotate(120deg) scale(1.05);
+    transform: rotate(120deg) scale(1.05);
+}
+
+.hex-grid .grid-item {
+    width: 91.6%;
+    margin: 0 -29.2%;
+    margin-bottom: -17.5%;
+}
+.hex-grid .grid-item:nth-child(2),
+.hex-grid .grid-item:nth-child(5),
+.hex-grid .grid-item:nth-child(8),
+.hex-grid .grid-item:nth-child(11),
+.hex-grid .grid-item:nth-child(14),
+.hex-grid .grid-item:nth-child(17),
+.hex-grid .grid-item:nth-child(20),
+.hex-grid .grid-item:nth-child(23),
+.hex-grid .grid-item:nth-child(26),
+.hex-grid .grid-item:nth-child(29) {
+    margin-top: 19%;
+}
+.hex-grid .grid-item:nth-child(4),
+.hex-grid .grid-item:nth-child(7),
+.hex-grid .grid-item:nth-child(10),
+.hex-grid .grid-item:nth-child(13),
+.hex-grid .grid-item:nth-child(16),
+.hex-grid .grid-item:nth-child(19),
+.hex-grid .grid-item:nth-child(22),
+.hex-grid .grid-item:nth-child(25),
+.hex-grid .grid-item:nth-child(28) {
+    clear: left;
+}
+.hex-grid .grid-item .inner {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+}
+.hex-grid .grid-item .inner .inner-inner {
+  -webkit-transform-style: preserve-3d;
+  /* Chrome, Safari, Opera */
+  transform-style: preserve-3d;
+  visibility: visible;
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 40%;
+  -webkit-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  -webkit-transition: all 0.35s ease-out;
+  transition: all 0.35s ease-out;
+  background-position: 50%;
+}
+@media (min-width: 1100px) {
+  .hex-grid .grid-item .inner .inner-inner {
+    padding-bottom: 40%;
+  }
+}
+.hex-grid .grid-item .inner .inner-inner:hover {
+  background-size: 60%;
+}
+.hex-grid .grid-item .inner .inner-inner .grid-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+    background: transparent;
+    color: #FFFFFF;
+  text-decoration: none;
+  text-align: center;
+  z-index: 2;
+  opacity: 1;  
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.hex-grid .grid-item .inner .inner-inner .grid-info:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.hex-grid .grid-item .inner .inner-inner .grid-info .inner-text {
+  display: table;
+  position: relative;
+  height: 100%;
+  width: 46%;
+  left: 27%;
+}
+.hex-grid .grid-item .inner .inner-inner .grid-info .inner-text .inner-text-inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.hex-grid .grid-item.hidden{
+    display:none;
+}
+.hex-grid .grid-item.invisible{    
+    opacity: 0;
+	pointer-events:none;
+}
+.hex-grid .inner-text-inner p{
+	line-height: 21px;
+    font-size: 20px;
+    color: #fff;
+	font-weight: 700;
+    visibility: visible;
+	text-align: center;
+    margin:0;
+    padding:0;
+}
+.hex-grid .inner-text-inner p span sup{
+	font-size: 10px;
+}
+
+
+.hex-grid .inner-text-inner {
+	font-weight: 700;
+}
+
+.hex-grid .inner-text-inner  span{
+	font-weight: 100;
+	font-style: italic;
+	line-height: 28px;   
+    display: block;
+    margin-top: 3px;
+}
+
+.hex-grid .mobile-h,.hex-grid .mobile-v{
+    display:none;	
+}
+
+.hex-start-section{
+    margin-top:-100px;
+}
+
+/*  Media */
+
+@media (max-width: 767px) {
+  .hex-grid {
+    width: 100%;
+    left: 0;
+  }
+    .heading-section{
+        display:none;
+    }
+    .grid-section{
+        float: left;
+        width: 100%;
+    }
+    .hex-grid .inner-text-inner p{
+        font-size:3.5vw !important;
+        line-height:4vw !important;
+    }
+    .hex-grid .inner-text-inner span {        
+        margin-top:0 !important;
+        font-size: 3.5vw !important;
+    }
+    .hex-start-section{
+        width:90% !important;
+        margin:0 auto;
+    }
+    
+    .hex-grid .mobile-h,.hex-grid .mobile-v{
+        display:block !important;
+    }
+     .hex-grid .mobile-h{
+         opacity:0;
+		 pointer-events:none;
+     }
+     .hex-grid .mobile-v{
+         opacity:1;
+		 cursor:default !important; 
+		 pointer-events:none;
+		 margin-top:25% !important;
+     }
+	.hex-grid .mobile-v .grid-info{
+		cursor:default !important; 
+		 pointer-events:none;
+	}
+	.hex-grid .mobile-v p{
+		color:#000 !important;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1025px) {
+  .hex-grid {
+    width: 100%;
+    left: 0;
+  }
+  
+  .heading-section{
+        display:none;
+    }
+     .hex-start-section{
+        width:500px !important;
+        margin:0 auto;
+    }
+    .hex-grid .mobile-h,.hex-grid .mobile-v{
+        display:block !important;
+    }
+     .hex-grid .mobile-h{
+        opacity:0;
+		pointer-events:none;
+     }
+     .hex-grid .mobile-v{
+         opacity:1;
+		 cursor:default !important; 
+		 pointer-events:none;
+		 margin-top:25% !important;
+     }
+	.hex-grid .mobile-v .grid-info{
+		cursor:default !important; 
+		 pointer-events:none;
+	}
+	.hex-grid .mobile-v p{
+		color:#000 !important;
+	}
+	
+}
+/* Hex Grid End */
